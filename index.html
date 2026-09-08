@@ -1,0 +1,1015 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Персональный план первых трёх месяцев в Albion Online на сервере Europe: хилер и танк, прокачка томами, экономика на сборе и Чёрном рынке.">
+<title>Старт в Albion Europe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+<style>
+  :root{
+    --ground:#EAE8E2;
+    --surface:#F7F6F3;
+    --surface-2:#E1DED6;
+    --line:#CFCBC1;
+    --line-soft:#DCD8CF;
+    --ink:#1A1D22;
+    --ink-2:#4A4F58;
+    --ink-3:#767C87;
+    --accent:#8A6512;
+    --accent-soft:#F0E4C4;
+    --zone-blue:#3D6FC4;
+    --zone-yellow:#B98A15;
+    --zone-red:#B0452F;
+    --zone-black:#5D4E74;
+    --good:#3F7355;
+    --warn:#A6621B;
+    --shadow:0 1px 2px rgba(26,29,34,.06), 0 8px 24px -16px rgba(26,29,34,.35);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ground:#13161B;
+      --surface:#1A1E25;
+      --surface-2:#232830;
+      --line:#333A44;
+      --line-soft:#272D36;
+      --ink:#E2E5EA;
+      --ink-2:#A9B1BC;
+      --ink-3:#7A828E;
+      --accent:#D2A44A;
+      --accent-soft:#2C2618;
+      --zone-blue:#6C9BEC;
+      --zone-yellow:#D8AC3E;
+      --zone-red:#D2624B;
+      --zone-black:#9A8AB8;
+      --good:#6BB088;
+      --warn:#D19546;
+      --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px -18px rgba(0,0,0,.9);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#13161B;
+    --surface:#1A1E25;
+    --surface-2:#232830;
+    --line:#333A44;
+    --line-soft:#272D36;
+    --ink:#E2E5EA;
+    --ink-2:#A9B1BC;
+    --ink-3:#7A828E;
+    --accent:#D2A44A;
+    --accent-soft:#2C2618;
+    --zone-blue:#6C9BEC;
+    --zone-yellow:#D8AC3E;
+    --zone-red:#D2624B;
+    --zone-black:#9A8AB8;
+    --good:#6BB088;
+    --warn:#D19546;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px -18px rgba(0,0,0,.9);
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    background:var(--ground);
+    color:var(--ink);
+    font-family:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;
+    font-size:16px;
+    line-height:1.62;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{
+    max-width:1120px;
+    margin:0 auto;
+    padding:0 24px 96px;
+  }
+
+  /* ---------- header ---------- */
+  .masthead{
+    padding:56px 0 32px;
+    border-bottom:1px solid var(--line);
+  }
+  .eyebrow{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:11.5px;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--ink-3);
+    margin:0 0 18px;
+  }
+  h1{
+    font-family:Spectral,Georgia,serif;
+    font-weight:700;
+    font-size:clamp(38px,6vw,62px);
+    line-height:1.04;
+    letter-spacing:-.015em;
+    margin:0 0 18px;
+    text-wrap:balance;
+  }
+  h1 em{
+    font-style:italic;
+    color:var(--accent);
+  }
+  .standfirst{
+    font-family:Spectral,Georgia,serif;
+    font-size:clamp(17px,2.2vw,20px);
+    line-height:1.55;
+    color:var(--ink-2);
+    max-width:62ch;
+    margin:0;
+  }
+
+  .loadout{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+    gap:1px;
+    background:var(--line-soft);
+    border:1px solid var(--line-soft);
+    margin:36px 0 0;
+  }
+  .loadout div{
+    background:var(--ground);
+    padding:16px 18px;
+  }
+  .loadout dt{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:10.5px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--ink-3);
+    margin:0 0 5px;
+  }
+  .loadout dd{
+    margin:0;
+    font-size:15px;
+    font-weight:500;
+    line-height:1.35;
+  }
+
+  /* ---------- sections ---------- */
+  section{padding:56px 0 0;}
+  h2{
+    font-family:Spectral,Georgia,serif;
+    font-weight:600;
+    font-size:clamp(26px,3.4vw,34px);
+    line-height:1.15;
+    letter-spacing:-.01em;
+    margin:0 0 8px;
+    text-wrap:balance;
+  }
+  .lede{
+    color:var(--ink-2);
+    max-width:66ch;
+    margin:0 0 28px;
+  }
+  h3{
+    font-family:Spectral,Georgia,serif;
+    font-weight:600;
+    font-size:20px;
+    margin:0 0 10px;
+    line-height:1.25;
+  }
+  p{margin:0 0 14px; max-width:70ch;}
+  a{color:var(--accent); text-underline-offset:3px;}
+  a:focus-visible, .toc a:focus-visible{outline:2px solid var(--accent); outline-offset:3px;}
+  strong{font-weight:600;}
+  .rule{border:0;border-top:1px solid var(--line);margin:0;}
+
+  /* ---------- phases ---------- */
+  .phases{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:20px;
+  }
+  .phase{
+    border-top:2px solid var(--accent);
+    padding-top:16px;
+  }
+  .phase .n{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:11px;
+    letter-spacing:.14em;
+    color:var(--accent);
+    display:block;
+    margin-bottom:8px;
+  }
+  .phase h3{font-size:18px;margin-bottom:8px;}
+  .phase p{font-size:14.5px;color:var(--ink-2);margin:0;}
+  .phase ul{margin:8px 0 0;padding-left:18px;font-size:14.5px;color:var(--ink-2);}
+  .phase li{margin-bottom:5px;}
+
+  /* ---------- role cards ---------- */
+  .roles{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:22px;
+  }
+  .role{
+    background:var(--surface);
+    border:1px solid var(--line-soft);
+    box-shadow:var(--shadow);
+    padding:24px;
+  }
+  .role .tag{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:10.5px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--ink-3);
+    display:block;
+    margin-bottom:10px;
+  }
+  .role h3{margin-bottom:12px;}
+  .role .why{
+    font-size:14.5px;
+    color:var(--ink-2);
+    border-left:2px solid var(--accent);
+    padding-left:12px;
+    margin:0 0 18px;
+  }
+  .kv{margin:0;font-size:14.5px;}
+  .kv > div{
+    display:grid;
+    grid-template-columns:82px 1fr;
+    gap:10px;
+    padding:7px 0;
+    border-top:1px solid var(--line-soft);
+  }
+  .kv dt{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:11px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--ink-3);
+    padding-top:3px;
+  }
+  .kv dd{margin:0;}
+  .ladder{
+    list-style:none;
+    margin:16px 0 0;
+    padding:0;
+    font-size:14px;
+    counter-reset:step;
+  }
+  .ladder li{
+    padding:6px 0 6px 26px;
+    position:relative;
+    color:var(--ink-2);
+    border-top:1px solid var(--line-soft);
+  }
+  .ladder li::before{
+    counter-increment:step;
+    content:counter(step);
+    position:absolute;
+    left:0;top:6px;
+    font-family:"IBM Plex Mono",monospace;
+    font-size:11px;
+    color:var(--accent);
+  }
+  .ladder b{color:var(--ink);font-weight:600;}
+
+  /* ---------- tables ---------- */
+  .scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 18px;}
+  table{
+    border-collapse:collapse;
+    width:100%;
+    min-width:540px;
+    font-size:14.5px;
+  }
+  caption{
+    text-align:left;
+    font-family:"IBM Plex Mono",monospace;
+    font-size:10.5px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--ink-3);
+    padding-bottom:10px;
+  }
+  th{
+    text-align:left;
+    font-weight:600;
+    font-size:12px;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    color:var(--ink-3);
+    padding:0 14px 8px 0;
+    border-bottom:1px solid var(--line);
+    vertical-align:bottom;
+  }
+  td{
+    padding:11px 14px 11px 0;
+    border-bottom:1px solid var(--line-soft);
+    vertical-align:top;
+  }
+  td.num, th.num{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;white-space:nowrap;}
+  tr td:first-child{font-weight:500;}
+  .zonecell{
+    border-left:4px solid var(--line);
+    padding-left:12px;
+  }
+  .z-blue{border-left-color:var(--zone-blue);}
+  .z-yellow{border-left-color:var(--zone-yellow);}
+  .z-red{border-left-color:var(--zone-red);}
+  .z-black{border-left-color:var(--zone-black);}
+  .z-mist{border-left-color:var(--accent);}
+
+  /* ---------- callouts ---------- */
+  .note{
+    background:var(--surface);
+    border:1px solid var(--line-soft);
+    border-left:3px solid var(--accent);
+    padding:18px 20px;
+    margin:0 0 20px;
+  }
+  .note p:last-child{margin-bottom:0;}
+  .note.edge{border-left-color:var(--good);}
+  .note.edge .label{color:var(--good);}
+  .note .label{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:10.5px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--accent);
+    display:block;
+    margin-bottom:8px;
+  }
+  .verify{
+    display:inline-block;
+    font-family:"IBM Plex Mono",monospace;
+    font-size:10.5px;
+    letter-spacing:.06em;
+    color:var(--warn);
+    border:1px solid var(--warn);
+    border-radius:2px;
+    padding:0 5px;
+    vertical-align:1px;
+    white-space:nowrap;
+  }
+
+  /* ---------- money math ---------- */
+  .math{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:1px;
+    background:var(--line-soft);
+    border:1px solid var(--line-soft);
+    margin:0 0 20px;
+  }
+  .math > div{background:var(--surface);padding:20px;}
+  .math .k{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:10.5px;
+    letter-spacing:.13em;
+    text-transform:uppercase;
+    color:var(--ink-3);
+    margin:0 0 8px;
+  }
+  .math .v{
+    font-family:Spectral,Georgia,serif;
+    font-size:30px;
+    line-height:1;
+    font-weight:600;
+    font-variant-numeric:tabular-nums;
+    margin:0 0 6px;
+  }
+  .math .v.up{color:var(--good);}
+  .math .s{font-size:13.5px;color:var(--ink-2);margin:0;line-height:1.45;}
+
+  /* ---------- changed / traps lists ---------- */
+  .changed{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:0 32px;
+  }
+  .changed li{
+    padding:14px 0;
+    border-top:1px solid var(--line-soft);
+    font-size:14.5px;
+    color:var(--ink-2);
+  }
+  .changed b{color:var(--ink);font-weight:600;display:block;font-size:15px;margin-bottom:3px;}
+  .traps{margin:0;padding-left:20px;max-width:72ch;}
+  .traps li{margin-bottom:10px;color:var(--ink-2);}
+  .traps b{color:var(--ink);}
+
+  .links{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:16px;
+    margin:0;
+    padding:0;
+    list-style:none;
+  }
+  .links li{
+    border-top:1px solid var(--line);
+    padding-top:12px;
+    font-size:14px;
+    color:var(--ink-2);
+  }
+  .links a{font-weight:600;display:block;margin-bottom:3px;}
+
+  footer{
+    margin-top:64px;
+    padding-top:24px;
+    border-top:1px solid var(--line);
+    font-size:13px;
+    color:var(--ink-3);
+    max-width:72ch;
+  }
+
+  @media (max-width:620px){
+    .wrap{padding:0 18px 64px;}
+    .masthead{padding:36px 0 24px;}
+    .kv > div{grid-template-columns:1fr;gap:2px;}
+    .kv dt{padding-top:0;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none !important;transition:none !important;}
+  }
+</style>
+<style>
+  html{color-scheme:light dark;}
+  body{margin:0;}
+  img{max-width:100%;}
+  [hidden]{display:none !important;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="eyebrow">Персональный маршрут · сезон 34 · сентябрь 2026</p>
+    <h1>Старт в <em>Albion Europe</em></h1>
+    <p class="standfirst">План на первые три месяца: как из нулевого персонажа собрать хилера, которого зовут в ZvZ, и экономику, которая сама оплачивает премиум — не потратив ни рубля.</p>
+
+    <dl class="loadout">
+      <div><dt>Сервер</dt><dd>Europe — ближайший, переносов между серверами нет</dd></div>
+      <div><dt>Роли</dt><dd>Хилер и саппорт сначала, танк потом</dd></div>
+      <div><dt>Экономика</dt><dd>Сбор шкур и переработка — или флип на Чёрном рынке</dd></div>
+      <div><dt>Цель</dt><dd>≈30 млн на премиум и ≈16 млн на прокачку томами</dd></div>
+    </dl>
+  </header>
+
+  <section>
+    <h2>Маршрут</h2>
+    <p class="lede">Четыре фазы, и порядок здесь принципиален: экономика идёт первой, потому что без премиума не копятся Focus Points, а без них не работает вся переработка.</p>
+
+    <div class="phases">
+      <div class="phase">
+        <span class="n">ФАЗА 01 · дни 1–3</span>
+        <h3>Туториал и жёлтая зона</h3>
+        <ul>
+          <li>В «Первых шагах» бери путь <b>Gatherer</b> — он ведёт ровно туда, куда тебе надо</li>
+          <li>Дойди до T4, поставь базой <b>Бридживотч</b> — степь, главный биом шкур</li>
+          <li>Собирай только в жёлтых зонах: там нет полного лута, теряешь лишь прочность</li>
+          <li>Ставки: 150–400 тыс. серебра в час</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <span class="n">ФАЗА 02 · недели 1–2</span>
+        <h3>Первые 30 миллионов</h3>
+        <ul>
+          <li>Собирательский сет T4 на <b>шкуры</b> — самый дорогой ресурс за единицу</li>
+          <li>Параллельно качай <b>Nature Staff</b> — это твой пропуск в гильдию</li>
+          <li>Маунт: <b>Expert's Riding Horse</b>, не бык</li>
+          <li>Есть развилка: тот же результат даёт <b>флип на Чёрном рынке</b> — без риска и без прокачки</li>
+          <li>Купи 3750 золота → 30 дней премиума</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <span class="n">ФАЗА 03 · недели 3–6</span>
+        <h3>Остров, фокус, гильдия</h3>
+        <ul>
+          <li>Сразу после премиума — <b>остров за 18 750</b>, это лучший ROI в игре</li>
+          <li>10 000 Focus в день уходят на переработку своего же сырья</li>
+          <li>Мисты и красные зоны, сет T5–T6</li>
+          <li>Заявка в ZvZ-гильдию <b>хилером на Blight Staff</b></li>
+        </ul>
+      </div>
+      <div class="phase">
+        <span class="n">ФАЗА 04 · месяц 2–3+</span>
+        <h3>Танк и большие бои</h3>
+        <ul>
+          <li>Mace до мастерства 100, Heavy Mace на ZvZ</li>
+          <li>Гильдия регирит — платишь спекой, а не серебром</li>
+          <li>Территории, Crystal League, сезонные Invasion Days</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Три решения на старте</h2>
+    <p class="lede">Каждое из них потом не отменить дёшево, поэтому лучше принять их осознанно в первый час.</p>
+
+    <div class="roles">
+      <div class="role">
+        <span class="tag">Решение 1</span>
+        <h3>Сервер Europe</h3>
+        <p style="font-size:14.5px;color:var(--ink-2);margin:0;">Серверов три: Americas (Вашингтон), Asia (Сингапур) и Europe, запущенный 29 апреля 2024 года. Персонаж намертво привязан к серверу — <strong>официального переноса не существует</strong>. Аккаунт один на все три, персонажи разные. Europe — и по пингу из Москвы, и по населению. Заодно там золото стоит ~8 тыс. серебра против ~13 тыс. на азиатском, то есть премиум дешевле в полтора раза.</p>
+      </div>
+      <div class="role">
+        <span class="tag">Решение 2</span>
+        <h3>Собирать в Бридживотче, перерабатывать в Мартлоке</h3>
+        <p style="font-size:14.5px;color:var(--ink-2);margin:0;">Здесь есть ловушка. Мартлок перерабатывает <strong>шкуры в кожу</strong> — а шкуры и есть самый дорогой ресурс. Но Мартлок стоит в нагорье, а шкуры выше T1 водятся <strong>только в лесу, степи, болоте, Дорогах и Мистах</strong>. В нагорье и в горах их нет вообще. Главный биом шкур — <strong>степь, то есть Бридживотч</strong>: там же самые безобидные животные (см. ниже). Поэтому собирать надо там, а возить в Мартлок — дорога между королевскими городами безопасна, шанс ганга около нуля.</p>
+      </div>
+      <div class="role">
+        <span class="tag">Решение 3</span>
+        <h3>Одна ветка сбора</h3>
+        <p style="font-size:14.5px;color:var(--ink-2);margin:0;">Специализация на Destiny Board даёт +0,5% к добыче и +0,5 к скорости за очко, и стоимость фокуса падает вдвое за каждые 10 000 единиц эффективности — вплоть до 6,25% от базовой. Разница между специалистом и универсалом на дистанции — <strong>шестнадцатикратная</strong>. Бери шкуры и не распыляйся.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Роли: во что бить и чем лечить</h2>
+    <p class="lede">Главное, что стоит понять про ZvZ-гильдии: хилеров и саппортов набирают постоянно, а танк — это доверенная роль, которую каллер отдаёт человеку, чью игру он уже видел. Поэтому заходишь ты хилером, а танком становишься.</p>
+
+    <div class="roles">
+      <div class="role">
+        <span class="tag">Приоритет 1 · качать первым</span>
+        <h3>Хилер · ветка Nature</h3>
+        <p class="why">Самая востребованная и самая прощающая роль. Blight Staff прямо описывают как «доступный для новичков в зерге».</p>
+        <dl class="kv">
+          <div><dt>ZvZ</dt><dd><strong>Blight Staff</strong> — Q: Rejuvenating Flower, W: Cleanse Heal (снимает контроль и дебаффы), E: Blight (канал АоЕ-лечения на ходу)</dd></div>
+          <div><dt>Альт</dt><dd><strong>Fallen Staff</strong> (ветка Holy) — бёрст-хил на стак: Holy Flash / Holy Orb / Salvation</dd></div>
+          <div><dt>Мелкий&nbsp;формат</dt><dd><strong>Hallowfall + Mistcaller</strong> — хеллгейты, арена, данжи. Дорого</dd></div>
+          <div><dt>Броня</dt><dd>Knight Helmet (иммун к смещению) · Cleric Robe или Robe of Purity · Scholar Sandals либо Mercenary Shoes (Break Free)</dd></div>
+          <div><dt>Плащ</dt><dd>Lymhurst Cape — стандарт хилера</dd></div>
+        </dl>
+        <ol class="ladder">
+          <li><b>Nature Staff</b> → базовое, дешёвое, качается на мобах</li>
+          <li><b>Blight Staff</b> → спека 50+ и сет T6 — этого хватает, чтобы взяли</li>
+          <li><b>Holy</b> второй веткой → Fallen Staff, броня та же</li>
+        </ol>
+      </div>
+
+      <div class="role">
+        <span class="tag">Приоритет 2 · запасной вход</span>
+        <h3>Саппорт · ветка Arcane</h3>
+        <p class="why">Если хилеров в гильдии перебор — вот вторая дверь. Целиться не нужно вообще, а ценность огромная.</p>
+        <dl class="kv">
+          <div><dt>Основа</dt><dd><strong>Malevolent Locus</strong> — E: The Void, растущий пузырь, снимающий с союзников контроль и вредные эффекты и добавляющий резист</dd></div>
+          <div><dt>Альт</dt><dd><strong>Occult Staff</strong> — E: Time Corridor, групповая мобильность и репозиция</dd></div>
+          <div><dt>Минус</dt><dd>Урона нет вообще, мобильность низкая — в соло не выжить</dd></div>
+        </dl>
+        <p style="font-size:14px;color:var(--ink-3);margin:16px 0 0;">Ту же роль закрывают Lifecurse Staff (дебаффер с оффхендом Astral Aegis) и Icicle Staff — но фрост-ветку в августе подрезали, рут с 2,5 до 2 секунд.</p>
+      </div>
+
+      <div class="role">
+        <span class="tag">Приоритет 3 · месяц 2+</span>
+        <h3>Танк · ветка Mace</h3>
+        <p class="why">Mace — единственная танк-ветка без артефактов, то есть самый дешёвый путь к рабочему T8. Всё семейство сидит на одном узле, слава течёт на все.</p>
+        <dl class="kv">
+          <div><dt>ZvZ</dt><dd><strong>Heavy Mace</strong> — E: Defensive Slam, плюс Air Compressor (сбивает врагов в кучу), Battle Howl, Sacred Ground</dd></div>
+          <div><dt>Энгейдж</dt><dd><strong>1H Mace + щит</strong> — Deep Leap на вход, Air Compressor на слипание</dd></div>
+          <div><dt>Данжи</dt><dd><strong>Incubus Mace</strong> — Threatening Smash, Shrinking Curse. Стартовый сет ~80–120 тыс.</dd></div>
+          <div><dt>Потом</dt><dd>Grovekeeper (Ground Pound) → Hand of Justice (Onslaught) — но это уже аваланские цены</dd></div>
+          <div><dt>Броня</dt><dd>Knight Helmet или Assassin Hood (Meditation — сброс кулдаунов на второй заход) · Guardian Armor · Duskweaver Boots · Martlock Cape</dd></div>
+        </dl>
+        <p style="font-size:14px;color:var(--ink-3);margin:16px 0 0;"><b>«Клап»</b> — это связка: инициатор стягивает вражеский блоб в плотный ком, и в это окно вся ДД-часть сбрасывает АоЕ. Heavy Mace обычно не пуллит, а слипает Air Compressor'ом, гасит ответный клап Defensive Slam'ом и держит пространство.</p>
+      </div>
+    </div>
+
+    <div class="note" style="margin-top:24px;">
+      <span class="label">Тайминг в твою пользу</span>
+      <p>Сезон 34 идёт с 12 сентября по 9 ноября, и на весь сезон разработчики <strong>убрали Resilience Penetration со всего ближнего оружия и трансформаций</strong> — эксперимент. Это заметно ослабляет бёрст по стаку, то есть танки и хилеры сейчас сильнее обычного. Учти, что после 9 ноября механику могут вернуть, и любой гайд, завязанный на резист-пен, эти два месяца врёт.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Прокачка, которой не видно</h2>
+    <p class="lede">Уровней персонажа в Альбионе нет — и это сбивает с толку, потому что прогрессия здесь огромная, просто спрятана в Destiny Board. Разобраться в ней стоит до первого захода: почти вся она покупается за серебро, а серебро вы зарабатывать умеете.</p>
+
+    <h3>Две шкалы, а не одна</h3>
+    <p><strong>Мастерство</strong> (Mastery) — узел на всё семейство оружия. Копится с любым оружием линейки и <em>открывает тиры</em>: уровень 1 даёт T4, 10 — T5, 30 — T6, 60 — T7, 100 — T8. Плюс открывает способности на уровнях 3, 6, 15, 20, 40, 50, 70 и 85. Даёт скромные +0,2 к силе предмета за уровень.</p>
+    <p><strong>Специализация</strong> (Specialization) — узел на конкретный предмет. Копится только пока надет именно он, ничего не открывает, но даёт <strong>+2,0 к силе предмета за уровень</strong> — в десять раз больше. Это и есть основная прокачка.</p>
+    <p>Обе шкалы заполняются <strong>одновременно от одной и той же славы</strong>, и ничего не делится. Одно убийство с посохом в руках зачисляет полную славу и в мастерство, и в специализацию посоха, и отдельно в каждый надетый элемент брони. Все узлы растут параллельно на полной скорости.</p>
+
+    <h3>Из чего складывается Item Power</h3>
+    <div class="scroll">
+      <table>
+        <caption>Вклад в силу предмета</caption>
+        <thead><tr><th>Источник</th><th class="num">Сколько даёт</th><th>Комментарий</th></tr></thead>
+        <tbody>
+          <tr><td>Базовый тир</td><td class="num">T4 700 → T8 1100</td><td>Шаг между тирами — всего 100</td></tr>
+          <tr><td>Зачарование</td><td class="num">+100 за уровень</td><td>То есть T4.3 = 1000 = база флэтового T7</td></tr>
+          <tr><td>Артефактность</td><td class="num">+25 … +100</td><td>Руна, душа, реликвия, аваланский</td></tr>
+          <tr><td>Качество</td><td class="num">+20 … +100</td><td>Good, Outstanding, Excellent, Masterpiece</td></tr>
+          <tr><td>Мастерство</td><td class="num">+0,2 за уровень</td><td>Максимум +20</td></tr>
+          <tr><td><strong>Специализация</strong></td><td class="num"><strong>+2,0 за уровень</strong></td><td><strong>Максимум +198 — главный источник</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Вклад двух последних строк дополнительно умножается на модификатор тира: +5% на T5, +10% на T6, +15% на T7, +20% на T8.</p>
+
+    <div class="note edge">
+      <span class="label">Отсюда главный вывод про снарягу</span>
+      <p>Переход на следующий тир даёт всего 100 силы, а специализация с нуля до 50 — примерно столько же, и стоит куда дешевле. <strong>Спека и зачарование бьют тир.</strong> Гнаться за T8 в первые месяцы бессмысленно: T6.1 с приличной спекой сильнее голого T7.</p>
+    </div>
+
+    <h3>Сколько это в славе</h3>
+    <div class="scroll">
+      <table>
+        <caption>Накопительно, от нуля</caption>
+        <thead><tr><th>Цель</th><th class="num">Слава</th><th>Что даёт</th></tr></thead>
+        <tbody>
+          <tr><td>Мастерство 10</td><td class="num">287 707</td><td>Открывает T5</td></tr>
+          <tr><td>Мастерство 30</td><td class="num">1 186 884</td><td>Открывает T6</td></tr>
+          <tr><td>Мастерство 60</td><td class="num">4 024 812</td><td>Открывает T7</td></tr>
+          <tr><td>Мастерство 100</td><td class="num">14 743 573</td><td>Открывает T8</td></tr>
+          <tr><td>Специализация 20</td><td class="num">1 546 588</td><td>+40 силы предмета</td></tr>
+          <tr><td>Специализация 50</td><td class="num">6 427 843</td><td>+100 силы предмета</td></tr>
+          <tr><td>Специализация 100</td><td class="num">33 910 220</td><td>+198 силы предмета</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Слава покупается за серебро</h3>
+    <p><strong>Tome of Insight</strong> — расходник, который просто выдаёт славу. Тир T4 («Adept's») даёт 10 000 славы и <strong>единственный из всей линейки торгуется на рынке</strong>. На европейском сервере он стоит порядка 22–26 тысяч серебра, а оборот — 145–230 тысяч штук в день, так что купить можно любой объём.</p>
+    <p>В описании предмета есть ключевая строчка: <em>«убедитесь, что на вас надета боевая экипировка»</em>. Том зачисляет славу ровно так же, как убийство моба — во всё, что на вас надето. Надел хилерский сет, сел в банке, прокликал тома. Ни мобов, ни группы, ни риска.</p>
+
+    <div class="math">
+      <div>
+        <p class="k">Цена славы</p>
+        <p class="v">2,4</p>
+        <p class="s">Серебра за единицу славы. Одинаково для любого узла.</p>
+      </div>
+      <div>
+        <p class="k">Мастерство 60 · открыть T7</p>
+        <p class="v">≈9,7 млн</p>
+        <p class="s">Около 400 томов. Один вечер кликанья.</p>
+      </div>
+      <div>
+        <p class="k">Специализация 50</p>
+        <p class="v">≈15,4 млн</p>
+        <p class="s">643 тома. Половина месячного премиума.</p>
+      </div>
+      <div>
+        <p class="k">Специализация 100</p>
+        <p class="v">≈81 млн</p>
+        <p class="s">3 391 том. Это уже верхний эндгейм, не спешите.</p>
+      </div>
+    </div>
+    <p>Сравните с ценником на очки обучения в магазине за реальные деньги — и получится, что <strong>хороший торговец обгоняет кредитную карту</strong>. Единственная оговорка: значительная часть оборота томов идёт на крафт Satchel of Insight, так что большая долгая закупка сдвинет цену вверх.</p>
+
+    <h3>Проблема хилера, которой нет</h3>
+    <p>Логичный страх: посох лечит, а славу дают убийства — как тогда качать хилера? Ответ в том, что <strong>слава в группе не делится, а дублируется</strong>. Каждый участник в радиусе 50 метров получает полную славу за убийство, независимо от вклада в урон, и сверху накладывается групповой бонус: ×1,10 вдвоём, ×1,17 втроём, ×1,33 вчетвером и <strong>×1,40 в пятёрке</strong>. Хилер, не нанёсший ни единицы урона, получает ровно столько же, сколько лучший ДД.</p>
+    <p>Поэтому совет «прокачай сначала ДД-оружие, потом пересядешь» — вредный. Слава идёт в то, что надето: время с огненным посохом — это слава, <em>не</em> ушедшая в природный.</p>
+
+    <h3>Множитель зоны — рычаг, о котором молчат</h3>
+    <p>Базовая слава моба умножается на коэффициент зоны, и разброс здесь колоссальный:</p>
+    <div class="scroll">
+      <table>
+        <caption>Коэффициент славы PvE</caption>
+        <thead><tr><th>Где</th><th class="num">Множитель</th><th>Комментарий</th></tr></thead>
+        <tbody>
+          <tr><td class="zonecell z-mist">Мисты, жёлтые</td><td class="num">1,8</td><td><strong>Худший контент в игре по славе.</strong> Для серебра хорош, для прокачки — нет</td></tr>
+          <tr><td class="zonecell z-blue">Синяя зона</td><td class="num">2,15</td><td></td></tr>
+          <tr><td class="zonecell z-yellow">Жёлтая зона и жёлтые данжи</td><td class="num">2,4</td><td>Безопасная база</td></tr>
+          <tr><td class="zonecell z-red">Красная зона</td><td class="num">3,3</td><td></td></tr>
+          <tr><td class="zonecell z-black">Чёрная зона</td><td class="num">4,2 → 6,3</td><td>Растёт с глубиной. Дороги Авалона — 4,2</td></tr>
+          <tr><td class="zonecell z-mist">Ancient Lands, оранж, портал на 4–5</td><td class="num">11,7</td><td>Теряется только инвентарь, надетое остаётся</td></tr>
+          <tr><td class="zonecell z-mist">Ancient Lands, чёрный, портал на 4–5</td><td class="num">16,0</td><td><strong>Максимум в игре</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Порталы Ancient Lands на 4–5 человек, добавленные в конце августа, дают коэффициент вчетверо выше всего остального в игре — а порог входа всего <strong>900 силы предмета</strong>, который берётся уже в T6 с небольшой спекой. Порталы на 5–7 и 15–20 такого бонуса не получают. Если качаться, то там.</p>
+    <p>Сверху накладываются: премиум +50%, бонус хайдаута гильдии до +10%, Scroll of Fame +15% на три часа, святилища с бустом +50% на 200 секунд, ротирующиеся мировые события +10–25%, Drake Egg Biscuits +5% на 25 часов и сезонная награда до +10% на 90 дней. <span class="verify">свериться в игре</span> — складываются ли эти проценты или перемножаются, официально нигде не сказано.</p>
+
+    <h3>Куда девать очки обучения</h3>
+    <p>С премиумом капает 30 очков в день, без него — 10, и только за ежедневный бонус Adventurer's Challenge. Quick Learn умножает получаемую славу на узле в пять раз, тратя очки постепенно.</p>
+    <div class="note">
+      <span class="label">Контринтуитивно</span>
+      <p>Тратить очки на оружие — ошибка. Узел оружия стоит вчетверо дороже в очках, чем узлы <strong>головы и обуви</strong>, а уровень специализации даёт одинаковые +2 силы предмета в обоих случаях. Значит порядок такой: <strong>сначала Quick Learn на голову и обувь, потом нагрудник, потом оружие, а мастерство не трогать вовсе</strong> — у него худший курс, и его дешевле закрыть томами.</p>
+    </div>
+
+    <h3>План: хилер за пару вечеров</h3>
+    <ol class="traps">
+      <li><b>Премиум.</b> ≈30 млн. Всё дальнейшее сразу в полтора раза быстрее, плюс разово +500 очков обучения и 30 000 фокуса за первую в жизни покупку.</li>
+      <li><b>Quick Learn на голову, обувь и нагрудник</b> того сета, в котором будете играть. Не на посох.</li>
+      <li><b>Около 400 томов</b> (≈9,7 млн) в надетом хилерском сете. На выходе: мастерство 60 (открыт T7), специализация посоха ~34 и столько же на каждом элементе брони.</li>
+      <li><b>Ещё ~250 томов</b> (≈6 млн) поднимают специализацию до 50, мастерство до 73. Это примерно <strong>1100–1150 средней силы предмета в T6.1</strong> — выше порога Ancient Lands и на уровне обычных требований к групповым данжам.</li>
+      <li><b>Дальше играть.</b> Итого ≈16 млн серебра на тома плюс премиум. Обычный новичок идёт к этому неделями.</li>
+      <li><b>Albion Journal — параллельно и бесплатно.</b> В нём порядка 70 миллионов славы томами и несколько тысяч очков обучения. Его игнорируют почти все.</li>
+      <li><b>Танк — потом и почти даром.</b> Когда узел мастерства посоха упрётся в 100, вся дальнейшая слава начнёт конвертироваться в Combat Fame Credits, которые тратятся на другие боевые узлы. С включённым авто-респеком конвертируется вчетверо больше за серебро — ровно та сделка, которая выгодна человеку с деньгами. Хилер оплатит танка сам.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Деньги</h2>
+    <p class="lede">Премиум покупается за золото, золото — за серебро у других игроков через биржу. Цепочка полностью легальна и работает; вопрос только в том, сколько часов она стоит.</p>
+
+    <div class="math">
+      <div>
+        <p class="k">Премиум · 30 дней</p>
+        <p class="v">≈30 млн</p>
+        <p class="s">3 750 золота при курсе ~8 000 серебра. Это ~1 млн серебра в день.</p>
+      </div>
+      <div>
+        <p class="k">Годовой пакет</p>
+        <p class="v up">−20%</p>
+        <p class="s">36 000 золота за 365 дней = 3 000 золота в месяц. Если хватит терпения копить.</p>
+      </div>
+      <div>
+        <p class="k">Переработка своего сырья</p>
+        <p class="v up">+27%</p>
+        <p class="s">К той же добыче, за ~15 минут кликанья в бонусном городе с фокусом.</p>
+      </div>
+      <div>
+        <p class="k">Остров, уровень 1</p>
+        <p class="v">18 750</p>
+        <p class="s">Разовая цена за аккаунт. Даёт 400–900 тыс. в день за 15 минут. Не продавай его.</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:32px;">Как вообще начать снимать шкуры</h3>
+    <p>Первое, обо что спотыкаются все: <strong>слава сбора и боевая слава — разные валюты</strong>. Убийство животного даёт боевую славу тому, что на тебе надето. Славу сбора даёт <em>сама операция снятия шкуры</em>, и никак иначе. Поэтому Tome of Insight, дающий боевую славу, <strong>для профессии сборщика бесполезен</strong> — прокачать ей нож нельзя.</p>
+
+    <div class="note edge">
+      <span class="label">Правило −1 тира — то, о чём не знают почти все</span>
+      <p>Инструмент на тир ниже ресурса <strong>работает</strong>, просто на 50% медленнее: 5,4 секунды на заряд вместо 3,6. То есть <strong>ножом T3 можно снимать шкуры с животных T4 уже сейчас</strong>. Нож своего тира нужен только для <em>зачарованных</em> животных. Не надо ждать T4-ножа, чтобы фармить T4.</p>
+    </div>
+
+    <div class="scroll">
+      <table>
+        <caption>Лестница профессии</caption>
+        <thead><tr><th>Узел</th><th class="num">Слава сбора</th><th>Что открывает</th><th class="num">Сколько это животных</th></tr></thead>
+        <tbody>
+          <tr><td>Trainee Gatherer</td><td class="num">240</td><td>T2 всех пяти инструментов</td><td class="num">~18 животных T2</td></tr>
+          <tr><td>Journeyman Skinner</td><td class="num">2 250</td><td>Нож T3. Считается только шкура T2–T3</td><td class="num">84 животных T3</td></tr>
+          <tr><td><strong>Adept Skinner</strong></td><td class="num"><strong>30 000</strong></td><td><strong>Нож T4 и весь сет сборщика T4</strong></td><td class="num">667 животных T4</td></tr>
+          <tr><td>Expert Skinner</td><td class="num">140 000</td><td>Нож и сет T5</td><td class="num">1 244 животных T5</td></tr>
+          <tr><td>Master Skinner</td><td class="num">513 333</td><td>Нож и сет T6</td><td class="num">2 282 животных T6</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Слава за одно полностью заряженное животное: T2 — 13,5, T3 — 27, T4 — 45, T5 — 112,5, T6 — 225. Зачарование ровно удваивает славу за каждый уровень. <strong>Животные T1 дают ноль</strong> — кроликов и сурков трогать бессмысленно.</p>
+
+    <h3 style="margin-top:28px;">На кого охотиться</h3>
+    <p>Ключевая деталь, которая решает всё для слабого персонажа: <strong>почти все животные T2–T5 имеют радиус агрессии ноль</strong> — они не нападают, пока не ударишь. Их можно бить по одному без риска, что сбежится стая. Агрессивные исключения водятся в лесу.</p>
+    <div class="scroll">
+      <table>
+        <caption>Лучшие цели по тирам</caption>
+        <thead><tr><th>Тир</th><th>Кто и где</th><th class="num">Здоровье</th><th>Агрессия</th></tr></thead>
+        <tbody>
+          <tr><td>T2</td><td>Змея, болото (Тетфорд)</td><td class="num">400</td><td>нет</td></tr>
+          <tr><td>T3</td><td>Моабёрд, степь (Бридживотч)</td><td class="num">856</td><td>нет</td></tr>
+          <tr><td>T3</td><td>Лань, Мисты</td><td class="num">685</td><td>нет</td></tr>
+          <tr><td><strong>T4</strong></td><td><strong>Гигантский олень, степь</strong> — лучшая цель на T4</td><td class="num">1 143</td><td>нет</td></tr>
+          <tr><td>T5</td><td>Гигантская змея, болото</td><td class="num">1 162</td><td>нет</td></tr>
+          <tr><td>T3–T4</td><td class="zonecell z-red">Волк и кабан, лес (Лимхёрст)</td><td class="num">685 / 1 323</td><td><strong>да — обходить</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Всё, что T6 и выше, агрессивно и преследует на 30 метров. Лось T6 бьёт на 287, древний мамонт T8 — на 302 при 394 брони.</p>
+
+    <div class="note">
+      <span class="label">Чем убивать</span>
+      <p>Оружие на сбор не влияет никак — важно только то, что нож занимает основную руку. Стандартная практика: держать в руках ДД-оружие, убивать, потом переключаться на нож. Природный посох даёт около 30 базового урона в секунду, а двуручное ближнее оружие — около 45, и его способности гораздо лучше работают по одиночной цели. Сам нож как оружие бесполезен: 31 урона и <strong>ноль слотов под способности</strong>.</p>
+    </div>
+
+    <div class="note edge">
+      <span class="label">Вот здесь тома боевого развития и пригодятся</span>
+      <p>Тир оружия открывается боевой славой, а тома дают её именно тому, что надето. Значит: надеть дешёвое копьё или топор T2–T3 (пара сотен серебра) и вложить в него <strong>три тома по 10 000</strong>. Это закрывает всю цепочку до узла ветки оружия (25 157 славы) и открывает <strong>T4 этого оружия</strong>. Три тома — и время убийства падает примерно вдвое.</p>
+    </div>
+
+    <p><strong>Тома сбора тоже существуют</strong> — «Adept Animal Skinner Tome» даёт 1 000 славы сбора. Но на европейском сервере он стоит 144–221 тысячу серебра, то есть около 150–220 серебра за единицу славы против 2,4 за боевую. Закрыть узел покупкой — это 4,3–6,6 млн, невыгодно. Зато <strong>Albion Journal выдаёт около пяти таких томов бесплатно</strong> — это 5 000 славы, шестая часть узла. Их стоит выбить целенаправленно: снять шкуры с шести разных животных, собрать 250 ресурсов в степи, собрать ресурс в динамическом лагере, вырастить шесть видов животных на острове, сварить 20 зелий лечения.</p>
+
+    <div class="note">
+      <span class="label">Не рискуй ради славы сбора</span>
+      <p>Боевая слава растёт с опасностью зоны в 2–4 раза. <strong>Слава сбора одинакова во всех зонах</strong> — множитель 1 хоть в синей, хоть в чёрной (исключение — чёрные зоны с высокой активностью, там до 1,5). Красные и чёрные зоны нужны только ради доступа к высоким тирам и зачарованию, но не ради скорости прокачки профессии.</p>
+    </div>
+
+    <p style="color:var(--ink-3);font-size:14px;">И ещё одно на будущее: все пять веток сбора стоят одинаковой славы, а ору, дереву, волокну и камню <em>не нужно никого убивать</em> — там просто ноды. Волокно на T4 стоит почти столько же, сколько шкуры. Поднять параллельно вторую ветку за 2 250 славы — дешёвая страховка на случай, если убийства так и останутся узким местом. Шкуры при этом бросать не стоит: они дороже всех прочих ресурсов на каждом тире именно потому, что возрождаются в 2–11 раз медленнее и требуют боя.</p>
+
+    <h3 style="margin-top:32px;">Почему перерабатывать, а не продавать сырьё</h3>
+    <p>Это единственная часть экономики, где новичок гарантированно в плюсе. Покупать чужое сырьё и перерабатывать на продажу — низкомаржинальный оптовый бизнес (10–30% при шестизначных объёмах, и ты ешь убыток, если цена поедет). А вот переработать <em>то, что добыл сам</em>, — это чистая надбавка к уже потраченному труду:</p>
+
+    <div class="scroll">
+      <table>
+        <caption>Возврат ресурсов (Resource Return Rate)</caption>
+        <thead>
+          <tr><th>Где</th><th class="num">Переработка</th><th class="num">+ фокус</th><th class="num">Крафт</th><th class="num">+ фокус</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Королевский город с бонусом</td><td class="num">24,8%</td><td class="num">47,9%</td><td class="num">36,7%</td><td class="num">53,9%</td></tr>
+          <tr><td>Королевский город без бонуса</td><td class="num">15,2%</td><td class="num">43,5%</td><td class="num">15,2%</td><td class="num">43,5%</td></tr>
+          <tr><td>Хайдаут в чёрной зоне</td><td class="num">25%</td><td class="num">48%</td><td class="num">20%</td><td class="num">46%</td></tr>
+          <tr><td>Свой остров без бонуса</td><td class="num">0%</td><td class="num">37,1%</td><td class="num">0%</td><td class="num">37,1%</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Отсюда правило: <strong>перерабатывай в городе, а не на острове</strong>. Остров — это грядки, лаборанты и сундук, но не станки. И держи в голове, что «бонус производства +30%» — это возврат 23%, а не 30%; формула <span style="font-family:'IBM Plex Mono',monospace;font-size:13.5px;">бонус / (1 + бонус)</span>.</p>
+
+    <div class="note">
+      <span class="label">Комиссии, которые съедают «прибыль»</span>
+      <p>Налог с продажи <strong>8% без премиума и 4% с ним</strong>, плюс 2,5% за выставление ордера. Полный круг «купил ордером — продал ордером» стоит ~9% с премиумом и ~13% без. Любая перекупка со спредом меньше 10% — работа в минус. <span class="verify">свериться в игре</span> — на вики до сих пор висят старые 4–6%.</p>
+    </div>
+
+    <h3 style="margin-top:32px;">Focus Points</h3>
+    <p>10 000 в день, потолок 30 000, <strong>копятся только с премиумом</strong>. Это и есть та самая проблема курицы и яйца: первый месяц надо прожить без фокуса, на чистом сборе. Потолок в 30 000 значит, что через три дня накопление просто останавливается — фокус нужно тратить, а не хранить. Приоритет трат: переработка T6–T8 в бонусном городе, потом крафт, потом грядки.</p>
+
+    <h3 style="margin-top:28px;">Сколько это часов</h3>
+    <div class="scroll">
+      <table>
+        <caption>Реалистичные ставки по стадиям</caption>
+        <thead>
+          <tr><th>Стадия</th><th>Чем занят</th><th class="num">Серебра в час</th><th class="num">Часов в день на премиум</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Недели 1–2</td><td>Жёлтая зона, сет T4, продажа сырья</td><td class="num">150–400 тыс.</td><td class="num">3–6</td></tr>
+          <tr><td>Недели 3–6</td><td>Сет T5/T6, красные зоны и Мисты, своя переработка</td><td class="num">400–900 тыс.</td><td class="num">1,5–2,5</td></tr>
+          <tr><td>Дальше</td><td>Час сбора + 15 минут острова и фокуса</td><td class="num">до 2,5 млн</td><td class="num">≈1–1,5</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="color:var(--ink-3);font-size:14px;">Все цифры серебра в час — оценки сторонних гайдов, и они систематически оптимистичны. Первый месяц — настоящий грайнд, дальше премиум окупает себя примерно за час игры в день.</p>
+  </section>
+
+  <section>
+    <h2>Развилка: Чёрный рынок</h2>
+    <p class="lede">Всё, что выше, — путь через сбор ресурсов: надёжный, но упирающийся в часы. Есть второй маршрут к тем же тридцати миллионам, который не требует ни прокачки, ни фокуса, ни премиума, ни выхода из безопасного города. Он требует только капитала и умения читать рынок — и если такое умение уже есть, он быстрее.</p>
+
+    <h3>Как это вообще работает</h3>
+    <p>Чёрный рынок — это NPC в Каэрлеоне, который <strong>только покупает и никогда не продаёт</strong>. Всё, что он скупает у игроков, он складывает и потом раздаёт обратно в мир как добычу с мобов и из сундуков. То есть это главный сток снаряги в игре и одновременно источник почти всего лута.</p>
+    <p>Отсюда следует механика, которая переворачивает привычную логику спроса: <strong>заказы на покупку порождаются убийствами мобов</strong>. Когда кто-то убивает моба, часть серебра, которое должно было выпасть, отводится на финансирование заказа Чёрному рынку — по официальному описанию около 20%. Игрок получает остальные 80%.</p>
+
+    <div class="note edge">
+      <span class="label">Ключевой вывод</span>
+      <p>Спросом здесь управляет не вкус игроков, а <strong>таблица лута</strong>. Рынку нужно то, что должно выпасть с мобов, — а не то, что модно носить. Поэтому лучшие сделки регулярно оказываются на предметах, которые никто не производит специально: непопулярные оффхенды, немодные линейки брони, странные сочетания качества и зачарования. Это и есть та щель, в которую не смотрит толпа с настройками тулзы по умолчанию.</p>
+    </div>
+
+    <h3>Безопасная версия: не выходя из города</h3>
+    <p>Каэрлеон опасен по дороге, но безопасен внутри. Обычный рынок игроков и Чёрный рынок стоят в одном городе, а значит есть вариант без транспортировки вообще: <strong>купил на рынке Каэрлеона — тут же продал Чёрному рынку</strong>. Ни красных зон, ни ганков, ни потерь.</p>
+    <p>Доехать до Каэрлеона нужно один раз — и ехать надо <strong>голым и с пустым инвентарём</strong>. Серебро с банковского счёта не лутается и переезжает с тобой, терять по дороге нечего. Портала в Каэрлеон нет и безопасного маршрута нет: город кольцом окружают красные зоны. Апрельский патч <em>Radiant Wilds</em> выровнял расстояния до Каэрлеона между фракциями и <strong>перенёс вход в Caerleon Underway на противоположную сторону карты Longtimber Glen</strong>, так что все ролики с маршрутами старше апреля 2026 показывают дорогу, которой больше нет.</p>
+
+    <h3>Комиссии — и почему эта схема самая дешёвая в игре</h3>
+    <div class="scroll">
+      <table>
+        <caption>Стоимость каждого типа сделки</caption>
+        <thead>
+          <tr><th>Действие</th><th class="num">Сбор за ордер</th><th class="num">Налог с продажи</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Мгновенная покупка с чужого ордера</td><td class="num">нет</td><td class="num">нет</td></tr>
+          <tr><td>Выставить свой ордер на покупку</td><td class="num">2,5%</td><td class="num">нет</td></tr>
+          <tr><td><strong>Мгновенная продажа в ордер ЧР</strong></td><td class="num">нет</td><td class="num">8% / 4% с премиумом</td></tr>
+          <tr><td>Выставить свой ордер на продажу</td><td class="num">2,5%</td><td class="num">8% / 4%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Схема «мгновенно купил — мгновенно продал в существующий ордер» обходит оба сбора за выставление. <strong>Твоя полная себестоимость — 8% с продажи и больше ничего</strong> (4% после премиума). Это дешевле любой другой торговой конструкции в игре.</p>
+
+    <div class="note">
+      <span class="label">Не выставляй ордера на продажу Чёрному рынку</span>
+      <p>Торговец выкупит твоё предложение только тогда, когда его собственная цена дорастёт до твоей запрошенной. Таймера нет. На дорогих и сильно зачарованных предметах ожидание измеряется <strong>неделями</strong>, а капитал всё это время заморожен. Только мгновенное заполнение существующих ордеров.</p>
+    </div>
+
+    <h3>Что покупать</h3>
+    <p><strong>T4–T5, флэт и .1.</strong> Это контринтуитивно, но логика железная: подавляющее большинство убийств мобов на сервере происходит на низких тирах, значит там и объём спроса. Плюс скорость оборота капитала — сделка на сто тысяч, которую можно провернуть двадцать раз за час, бьёт сделку на миллион, которая закрывается три недели. Зачарование .2 идёт медленнее, .3 медленно, <strong>.4 не продаётся почти никогда</strong>.</p>
+    <p>Ходовые семейства: Cleric Robe и Mage Robe из ткани, Assassin Jacket и Mercenary Jacket из кожи, Soldier Armor и Guardian Armor из плиты, Hunter Hood, Mage Cowl, Scholar Sandals.</p>
+    <p>Что рынок <strong>не берёт</strong>: еду, зелья, сырьё и переработанные ресурсы, инструменты и собирательскую снарягу. Берёт всё, что надевается: оружие, оффхенды, броню, плащи, сумки, а также маунтов и Tomes of Insight.</p>
+
+    <div class="note edge">
+      <span class="label">Асимметрия качества — здесь и лежит преимущество</span>
+      <p>Каждый уровень качества (Normal, Good, Outstanding, Excellent, Masterpiece) — <strong>отдельная книга заказов со своей ценой</strong>. И правило одностороннее: предметом более высокого качества можно закрыть заказ на более низкое, но не наоборот.</p>
+      <p>Значит, всякий раз, когда ордер на Normal платит больше, чем ордер на Excellent — а из-за независимости книг это происходит регулярно, — можно скупать дешёвое Excellent на рынке игроков и сдавать его в более жирный Normal-ордер. Чёрный рынок вообще предпочитает простое дешёвое качество, так что Masterpiece-роллы место не здесь, а на рынке игроков.</p>
+      <p>Обратная сторона той же медали — <strong>главный способ сжечь капитал новичку</strong>: купить Normal под ордер на Excellent. Такая сделка невозможна в принципе, и предмет мгновенно превращается в мёртвый груз. Проверяй тир, зачарование <em>и</em> качество перед каждой покупкой.</p>
+    </div>
+
+    <h3>Масштаб</h3>
+    <div class="math">
+      <div>
+        <p class="k">Типичная сделка</p>
+        <p class="v">~100 тыс.</p>
+        <p class="s">Сделки на 500 тыс. встречаются нечасто, на миллион и выше — редкость.</p>
+      </div>
+      <div>
+        <p class="k">Рабочий банкролл</p>
+        <p class="v">1–3 млн</p>
+        <p class="s">Начать можно и с 500 тыс. Узкое место не деньги, а поиск сделок.</p>
+      </div>
+      <div>
+        <p class="k">На одну позицию</p>
+        <p class="v">≤10%</p>
+        <p class="s">Банкролла. Правило то же, что в любой торговле: не ставить всё в один предмет.</p>
+      </div>
+      <div>
+        <p class="k">Себестоимость</p>
+        <p class="v">8%</p>
+        <p class="s">Только налог. Премиум режет вдвое — это первая цель реинвестирования.</p>
+      </div>
+    </div>
+    <p style="color:var(--ink-3);font-size:14px;">Цифры «миллион–шесть миллионов в час», которые встречаются в гайдах и роликах, проверить нечем и они почти наверняка завышены. Честная оценка: доход равен числу найденных за час сделок, умноженному на чистую прибыль с каждой. Перелом относительно сбора наступает примерно на банкролле в 1–2 млн — и главное преимущество даже не в скорости, а в том, что здесь <strong>нечего терять</strong>.</p>
+
+    <h3>Что может пойти не так</h3>
+    <ol class="traps">
+      <li><b>Устаревшие данные — убийца номер один.</b> База знает цену Чёрного рынка только потому, что какой-то игрок физически открыл эту страницу в клиенте с запущенным аплоадером. На неликвиде цены висят месяцами. Ставь в тулзе максимальный возраст данных 15–30 минут и всё равно перепроверяй живой ордер в игре перед покупкой.</li>
+      <li><b>Сделку забрали, пока ты шёл.</b> Ту же строчку в списке видят все остальные. Купил — а ордер уже заполнен, и ты владелец неликвида.</li>
+      <li><b>Перекормил рынок.</b> Скупил сорок одинаковых предметов, стопка ордеров кончилась, цена просела, последние двадцать пять зависли. Не покупай больше, чем видно глубины в ордерах.</li>
+      <li><b>Конкуренция.</b> Только у одного из инструментов 108 тысяч пользователей и 217 миллиардов серебра сгенерированной прибыли. Очевидные сделки разбирают за минуты — искать надо в непопулярных углах.</li>
+      <li><b>Налог без премиума.</b> 8% против 4% — при марже в 20% это пятая часть прибыли.</li>
+    </ol>
+    <p>Отдельно про фон: патч 3 сентября 2025 года срезал добычу по всему миру — множитель качества в чёрной зоне с +30% до +20%, лут из аваланских сундуков −10%, сокровища и карты логовищ реже. Сам Чёрный рынок при этом не трогали с 2021 года, но пул серебра, который финансирует его заказы, с тех пор стал тоньше.</p>
+  </section>
+
+  <section>
+    <h2>Зоны и риск</h2>
+    <p class="lede">Вся математика выживания сводится к одной строке: <span style="font-family:'IBM Plex Mono',monospace;font-size:14px;">чистая прибыль = сданное в банк − (шанс гангa × стоимость груза, снаряги и маунта)</span>. Если тебя ловят в 15% случаев, а везёшь ты больше, чем зарабатываешь за шесть ходок, — ты работаешь бесплатно.</p>
+
+    <div class="scroll">
+      <table>
+        <caption>Где собирать</caption>
+        <thead>
+          <tr><th>Зона</th><th>PvP</th><th class="num">Тиры</th><th>Вердикт</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="zonecell z-blue">Синяя</td><td>нет</td><td class="num">T1–T4</td><td>Только учиться. Премиум так не окупить.</td></tr>
+          <tr><td class="zonecell z-yellow">Жёлтая</td><td>сбивают с ног, лут не падает</td><td class="num">T1–T5</td><td><strong>Твой старт.</strong> Теряешь только прочность.</td></tr>
+          <tr><td class="zonecell z-red">Красная</td><td>полный лут</td><td class="num">T1–T6</td><td>Золотая середина, когда есть сет T5/T6 и лошадь.</td></tr>
+          <tr><td class="zonecell z-black">Чёрная</td><td>полный лут</td><td class="num">T1–T8</td><td>Потолок дохода и потолок дисперсии. Не раньше, чем груз станет не жалко.</td></tr>
+          <tr><td class="zonecell z-mist">Мисты</td><td>соло/дуо, полный лут</td><td class="num">средние</td><td>Лучший соло-контент по риску к награде <em>для серебра</em>: выходы позволяют убежать и телепортироваться, внутри — Бресилиен, безопасный город со своим рынком. Но по славе жёлтые Мисты — худшее место в игре, качаться сюда не ходят.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note">
+      <span class="label">Лошадь, а не бык</span>
+      <p>Expert's Transport Ox везёт 133 единицы и <strong>не умеет убегать вообще</strong>. Expert's Riding Horse везёт 110 и даёт +65 к скорости. Ты отдаёшь 17% вместимости за возможность выжить — обмен даже не близкий. Быки существуют только для безопасных маршрутов между королевскими городами. И собирай, стоя у края круга маунта: посадка занимает 3 секунды, а они решают.</p>
+    </div>
+
+    <p>Настоящие деньги в сборе — не в тире, а в <strong>зачаровании</strong>. T6 руда флэт стоит ~800 серебра, T6.1 — около 2 000, T6.2 — под 7 000. Зачарованные ноды спавнятся в основном в красных и чёрных зонах, и это и есть единственный честный аргумент за поход в чёрную. Точных таблиц шансов нет ни у кого; смотри карту зон по клавише N в начале каждой сессии — ресурсные хотспоты ротируются, и близкий хотспот в жёлтой зоне часто выгоднее дальней вылазки.</p>
+  </section>
+
+  <section>
+    <h2>Что изменилось — чтобы не читать мёртвые гайды</h2>
+    <p class="lede">Albion переписывали быстрее, чем обновляли гайды. Всё, что ниже, устарело в роликах и статьях, которые до сих пор в топе выдачи.</p>
+
+    <ul class="changed">
+      <li><b>Learning Points работают иначе</b>Порога в 20%, после которого нода «докупалась» очками, больше нет. С июня 2025 действует Quick Learn: помечаешь ноду — слава на ней множится ×5, а очки тратятся постепенно. Совет «копить LP и вливать на 20%» мёртв.</li>
+      <li><b>Хеллгейтов 10 на 10 не существует</b>Убраны 30 июня 2025. Остались 2v2 и 5v5, вход в нелетальные — 700 IP.</li>
+      <li><b>Faction Warfare переделан целиком</b>С ноября 2025 это 20 провинций, экономика припасов, осады фракционных фортов и боевые штандарты. Описания в духе «флагнись и бегай на heart runs» — из другой игры.</li>
+      <li><b>Появился мягкий вход в PvP</b>The Depths под Каэрлеоном: инстанс, где <strong>надетая снаряга при смерти не теряется</strong>. Плюс S.A.F.E.-порталы и Smuggler's Dens — 35 мини-хабов с банком и рынком прямо в чёрных зонах.</li>
+      <li><b>Destiny Board выглядит по-другому</b>С апреля 2026 недоступные ноды скрыты по умолчанию, ветка Reaver удалена целиком, специализации свёрнуты в бейджи. Скриншоты в старых гайдах не совпадут.</li>
+      <li><b>Туториал переписан</b>Теперь в «Первых шагах» выбираешь путь: Adventurer, Duelist или Gatherer. Пути переключаются и пропускаются. Классический совет «первую неделю просто собирай T4» игра больше не поддерживает.</li>
+      <li><b>Премиум подорожал в серебре</b>~30 млн за 30 дней, а не 11–15 млн из гайдов 2023 года: золото инфлировало с ~3 000 до ~8 000 серебра. <span class="verify">свериться в игре</span> — часть источников до сих пор пишет 3 000 золота вместо 3 750.</li>
+      <li><b>Очки обучения теперь продают за деньги</b>С середины 2025 LP лежат в магазине. Славу купить по-прежнему нельзя, но ускорение — можно. Честная формулировка: «прогресс не покупается» уже неточна.</li>
+      <li><b>Игра вышла на Xbox</b>21 апреля 2026, с полным кроссплеем и общим прогрессом с ПК и мобилками. Тот же аккаунт, те же серверы.</li>
+      <li><b>Свежий контент — Dragonfire</b>С 31 августа: Ancient Lands (парящие острова, есть вариант с частичным лутом, кап 1200 IP) и Dragon Sanctuary — первый рейд на 20 человек с боссом-драконом. Это то, к чему ты идёшь.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Чего не делать</h2>
+    <ol class="traps">
+      <li><b>Качать ДД-оружие, чтобы «потом пересесть на хила».</b> Слава идёт в то, что надето прямо сейчас. В группе она не делится, а дублируется — хилер получает полную долю, ничего не убивая.</li>
+      <li><b>Гнаться за тиром вместо специализации.</b> Тир даёт 100 силы предмета, специализация до 50 — примерно столько же, но стоит дешевле и не требует нового сета.</li>
+      <li><b>Крафтить снарягу на продажу.</b> Против тебя игроки со спекой 100+, маржа 5–10%, нужен капитал на артефакты и правильный город. Это не стартовая профессия.</li>
+      <li><b>Распылять фокус и очки обучения по нескольким профессиям.</b> Специалист обрабатывает тем же фокусом в разы больше материала.</li>
+      <li><b>Считать прибыль без комиссий.</b> Половина «выгодных» перекупок уходит в минус после 2,5% + 2,5% + 8%.</li>
+      <li><b>Не смотреть комиссию станка перед большой партией.</b> Её ставит владелец, и в Каэрлеоне она бывает грабительской.</li>
+      <li><b>Ехать в Каэрлеон рано.</b> Туда ведут только красные зоны, и все ганкеры знают, кто и с чем по ним едет.</li>
+      <li><b>Покупать сет сбора T7/T8 раньше, чем научишься выживать.</b> Одна смерть стирает несколько дней прибыли.</li>
+      <li><b>Продавать остров.</b> Льготная цена — один раз на аккаунт, повторная покупка стоит на порядок дороже.</li>
+      <li><b>Забывать про лаборантов.</b> Не забрал выработку за 7 дней — она удаляется навсегда.</li>
+      <li><b>Ставить радар и оверлеи.</b> Рыночные данные собирать можно и разрешено, всё, что модифицирует клиент или показывает невидимое, — бан.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Инструменты</h2>
+    <p class="lede">Сотрудники студии публично говорили, что пассивно читать и анализировать данные можно, а вмешиваться в клиент — нет. Стоит знать, что <strong>текст пользовательского соглашения строже этой практики</strong>: формально он запрещает и перехват данных, и «технические инструменты, дающие преимущество». Риск в итоге на тебе. Граница, которую точно нельзя переходить, простая: оверлей, который показывает цены, а решение принимаешь ты, — терпят; скрипт, который сам жмёт «купить», — бан.</p>
+    <ul class="links">
+      <li><a href="https://albionfreemarket.com/flipper">Albion Free Market · Flipper</a>Главный инструмент, если идёшь через Чёрный рынок: сравнивает ордера городов с ордерами ЧР, считает комиссии и умеет режим «только Каэрлеон» — тот самый вариант без транспортировки. Есть отдельный поиск сделок на разнице качества.</li>
+      <li><a href="https://www.albion-online-data.com/">Albion Online Data Project</a>Основа всей экосистемы: игроки сливают в общую базу те рыночные страницы, которые сами открыли. Бесплатный API. Всегда смотри метку времени — данные свежи ровно настолько, насколько недавно кто-то туда заглядывал.</li>
+      <li><a href="https://albiononlinetools.com/economy/gold.php">albiononlinetools · золото</a>Курс золота и цена премиума сразу по трём серверам. Лучшая одна страница для расчёта, окупается ли месяц.</li>
+      <li><a href="https://www.tools4albion.com/">Tools4Albion</a>Калькуляторы переработки и крафта с точными рецептами. Старый и надёжный.</li>
+      <li><a href="https://metabattle.com/albion/ZvZ_Builds">Metabattle · ZvZ-билды</a>Роли, способности, слоты брони. Учти, что раздел привязан к патчу сентября 2025 — названия верны, оценки силы могли устареть.</li>
+      <li><a href="https://albionzvzmanual.github.io/">Albion ZvZ Manual</a>Теория больших боёв: как читается клап, что делает каждая роль, откуда берутся команды каллера.</li>
+      <li><a href="https://wiki.albiononline.com/">Официальная вики</a>Истина по механикам, но часть страниц лежит несвежая (те же налоги). Спорные числа проверяй в клиенте.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Твой ноутбук</h2>
+    <p>Ryzen 5 3500U и GTX 1050 для Albion — избыток: игра пойдёт на максималках в 1080p. Три вещи всё же стоит сделать до первого захода.</p>
+    <div class="note">
+      <p><strong>Первое.</strong> Ставь игру на Intel NVMe, а не на Patriot — загрузки зон заметно быстрее.</p>
+      <p><strong>Второе.</strong> Играй от сети. 3500U на батарее режет частоты почти вдвое, и в ZvZ это чувствуется.</p>
+      <p><strong>Третье.</strong> Проверь, что игра идёт на GTX 1050, а не на встроенной Vega 8: Параметры → Система → Дисплей → Настройки графики, добавь exe игры и выставь «Высокая производительность».</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Собрано 7 сентября 2026 года по патчноутам Dragonfire (31 августа 2026), анонсу сезона 34 и живым рыночным данным. Курс золота, цены сетов и ставки серебра в час меняются каждую неделю — перепроверяй числа в клиенте, особенно те, что помечены как спорные.</p>
+  </footer>
+
+</div>
+</body>
+</html>
